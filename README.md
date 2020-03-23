@@ -31,7 +31,7 @@ In this application i created a pages like
 
 ##Home
 
-This is a general page of application whid path ''
+This is a main page of application whid path ''
 
 ##News
 
@@ -49,6 +49,13 @@ If user wasn't authorizated, hi will be redirected to ##login page
 
 In this page you can login whid ###username and ###password which are stored in ###Firebase
 
+username: admin
+password: 12345
+
 ##Modules
 
-Also 
+Also Profile page is separated and using lazy loading  but without preloadingStrategy.
+
+###Design 
+
+bootstrap 4
