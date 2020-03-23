@@ -27,15 +27,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #Description 
 
-In this application i created a pages like 
+In this application, I created  pages like 
 
 ##Home
 
-This is a main page of application whid path ''
+This is the main page of application whid path ''
 
 ##News
 
-This page is using https://newsapi.org/ api and it can see everi users
+This page is using https://newsapi.org/ API and it can see every user
 
 ##Profile
 
@@ -43,7 +43,7 @@ A user can see this page only if hi was authorized.
 
 Authorization stored in localStorage.
 
-If user wasn't authorizated, hi will be redirected to ##login page
+If a user wasn't authorized, that user will be redirected to ##login page
 
 ##Login
 
@@ -54,8 +54,10 @@ password: 12345
 
 ##Modules
 
-Also Profile page is separated and using lazy loading  but without preloadingStrategy.
+The profile page is separated and using lazy loading but without preloadingStrategy.
+
+Also is exist a shared.modules.ts with all shared features
 
 ###Design 
 
-bootstrap 4
+using bootstrap 4
