@@ -39,7 +39,7 @@ This page is using https://newsapi.org/ API and it can see every user
 
 ##Profile
 
-A user can see this page only if hi was authorized.
+A user can see this page only if thet user authorized.
 
 Authorization stored in localStorage.
 
