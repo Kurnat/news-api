@@ -7,7 +7,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 
 // Components
-import { environment } from 'src/environments/environment';
+import { environment } from 'environments/environment';
 
 
 

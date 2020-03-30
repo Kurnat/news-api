@@ -1,4 +1,5 @@
 export interface Article {
+    source: object;
     author: string;
     title: string;
     description: string;
@@ -8,7 +9,7 @@ export interface Article {
     content: string;
 }
 
-export interface Res {
+export interface News {
     articles: Article[];
     totalResults: number;
     status: string;

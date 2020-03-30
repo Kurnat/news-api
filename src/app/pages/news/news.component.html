@@ -1,12 +1,12 @@
 <!-- error block -->
-<div class="text-danger bg-warning h-100 text-center  d-flex align-items-center flex-column justify-content-center " *ngIf="!!error.massage; else newsBlock">
+<div class="text-danger bg-warning h-100 text-center  d-flex align-items-center flex-column justify-content-center" *ngIf="!!error.massage; else newsBlock">
   <p class="h1 align-middle">Status: {{error.status}}</p>
   <p class="h5">{{error.massage}}</p>
 </div>
 <!-- news block -->
 <ng-template #newsBlock>
   <div class="m-3" *ngIf="response;else loading">
-    <div *ngFor="let article of response.articles">
+    <div *ngFor="let article of response">
 <!-- article card -->
       <div class="card mb-3 mt-3 mr-sm-auto ml-sm-auto app-shadow col-sm-11">
         <div class="row no-gutters">

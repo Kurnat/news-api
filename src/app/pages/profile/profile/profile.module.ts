@@ -4,11 +4,11 @@ import { RouterModule } from '@angular/router';
 
 // Components and guards
 import { ProfileComponent } from '../profile.component';
-import { AuthGuard } from 'src/app/shared/guards/auth.guard';
-import { PageNotFoundComponent } from '../../page-not-found/page-not-found.component';
+import { AuthGuard } from 'app/shared/guards/auth.guard';
+
 
 // Modules
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from 'app/shared/shared.module';
 
 
 
@@ -19,8 +19,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     SharedModule,
     RouterModule.forChild([
-      { path: '', component: ProfileComponent, canActivate: [AuthGuard] },
-      // { path: '**', component: PageNotFoundComponent},
+      { path: '', component: ProfileComponent, canActivate: [AuthGuard] }
     ])
   ],
   exports: [
