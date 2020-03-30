@@ -13,6 +13,8 @@ import { TodoService } from 'app/shared/services/todo.service';
 export class NewsComponent implements OnInit, OnDestroy {
   news$: Subscription;
   response: Article[];
+  // if no news image
+  imgUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxFBbhbJMlrG8K6sXRSR6cJjbvXZNNzm1swrkZR6p19P-juz5D';
 
   // error object to show if something went wrong
   error = {
