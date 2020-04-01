@@ -20,6 +20,7 @@ import { environment } from 'environments/environment';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase), // Firebase
     AngularFireDatabaseModule,
+
   ],
   exports: [
     CommonModule,

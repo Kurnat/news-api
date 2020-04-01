@@ -1,3 +1,4 @@
+import { NgxPaginationModule } from 'ngx-pagination';
 // Core
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +18,8 @@ import { LoginComponent } from './pages/login/login.component';
 // Modules
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { NavbarAdminComponent } from './components/admin/navbar-admin/navbar-admin.component';
+
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { SharedModule } from './shared/shared.module';
     NewsComponent,
     PageNotFoundComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

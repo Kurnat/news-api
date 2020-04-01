@@ -1,0 +1,38 @@
+<nav class="bg-transparent d-flex align-items-center mb-4">
+  <form [formGroup]="form" class="d-flex align-items-center text-white">
+    <div class="mr-3 d-flex align-items-center">
+      <p class="m-1 mr-md-3">Pages:</p>
+      <!-- Pages filter -->
+      <select class="custom-select-sm custom-select nav-item" formControlName="pageSize" (change)="newsFislter()">
+        <option value="5" selected>5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+    <div class="mr-3 d-flex align-items-center">
+      <p class="m-1 mr-md-3">Country:</p>
+      <!-- Country filter -->
+      <select class="custom-select-sm custom-select nav-item" formControlName="country" (change)="newsFislter()">
+        <option selected value="ua">Ukraine</option>
+        <option value="pl">Poland</option>
+        <option value="ru">Russia</option>
+        <option value="en">England</option>
+        <option value="fr">Franсe</option>
+        <option value="it">Italy</option>
+      </select>
+    </div>
+    <div class="mr-3 d-flex align-items-center">
+      <p class="m-1 mr-md-3">Category:</p>
+      <!-- Category filter -->
+      <select class="custom-select-sm custom-select nav-item" formControlName="category" (change)="newsFislter()">
+        <option selected value="general">General</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="health">Health</option>
+        <option value="science">Science</option>
+        <option value="sports">Sports</option>
+        <option value="business">Business</option>
+        <option value="technology">Technology</option>
+      </select>
+    </div>
+  </form>

@@ -5,31 +5,54 @@ import { TodoService } from 'app/shared/services/todo.service';
 
 
 
+
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit, OnDestroy {
-  news$: Subscription;
-  response: Article[];
-  // if no news image
-  imgUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSxFBbhbJMlrG8K6sXRSR6cJjbvXZNNzm1swrkZR6p19P-juz5D';
+  // tslint:disable-next-line:no-output-on-prefix
 
-  // error object to show if something went wrong
-  error = {
-    massage: null,
-    status: null
-  };
-  constructor(private todoService: TodoService) { }
+
+  news$: Subscription;
+  // news page
+  p = 1;
+  // Array with news article
+  collection: Article[] = [];
+  isAdmin: boolean | null = false;
+
+
+
+
+  constructor(public todoService: TodoService) { }
+
 
   ngOnInit(): void {
-    // get news
-    this.news$ = this.todoService.getTotos().subscribe((res: News): void =>  { this.response = res.articles; },
-    error => {
-      this.error.massage = error.message;
-      this.error.status = error.status;
-     });
+    this.fechTodos();
+    this.isAdmin = JSON.parse(localStorage.getItem('testAuth'));
+  }
+
+  // get news from server
+  fechTodos() {
+    // this.todoService.response is a array of news
+    this.news$ = this.todoService.getTotos().subscribe((res: News): void => {
+      this.todoService.response = res;
+    },
+      //  this.todoService.error object this is a message object to show if something went wrong
+      error => {
+        this.todoService.error.message = error.message;
+        this.todoService.error.status = error.status;
+      });
+  }
+
+  onActivate(event) {
+
+  }
+
+  pageChanged(event) {
+    this.todoService.page = event;
+    this.fechTodos();
   }
 
   ngOnDestroy(): void {
